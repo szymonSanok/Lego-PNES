@@ -58,6 +58,7 @@ public class JavaApplication10 {
                         cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
                         //cwiartka4[i][j] = (i+1)*j;
                     }
+                    //robot.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka4[0][0] = 7;      //
                 cwiartka4[0][1] = 7;      //wielkosc robota
@@ -78,6 +79,7 @@ public class JavaApplication10 {
                         cwiartka1[Math.abs((int) x)][Math.abs((int) y)] = 1;
                         //cwiartka1[i][j] = k-1;
                     }
+                    //robot.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka1[0][0] = 7;      //
                 cwiartka1[0][1] = 7;      //wielkosc robota
@@ -98,6 +100,7 @@ public class JavaApplication10 {
                         cwiartka2[Math.abs((int) x)][Math.abs((int) y)] = 1;
                         //cwiartka2[i][j] = (i+1)*j;
                     }
+                    //robot.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka2[0][0] = 7;      //
                 cwiartka2[0][1] = 7;      //wielkosc robota
@@ -118,6 +121,7 @@ public class JavaApplication10 {
                         cwiartka3[Math.abs((int) x)][Math.abs((int) y)] = 1;
                         //cwiartka3[i][j] = (i+1)*j;
                     }
+                    //robot.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka3[0][0] = 7;      //
                 cwiartka3[0][1] = 7;      //wielkosc robota
