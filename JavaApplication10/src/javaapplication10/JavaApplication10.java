@@ -18,210 +18,210 @@ public class JavaApplication10 {
      */
     public static void main(String[] args) {
 
-        int[][] cwiartka1 = new int[10][10];
-        int[][] cwiartka2 = new int[10][10];
-        int[][] cwiartka3 = new int[10][10];
-        int[][] cwiartka4 = new int[10][10];
-        int[][] cwiartka1o = new int[10][10];
-        int[][] cwiartka2o = new int[10][10];
-        int[][] cwiartka3o = new int[10][10];
-        int[][] cala = new int[100][100];
-        resetTab(cwiartka1);
-        resetTab(cwiartka2);
-        resetTab(cwiartka3);
-        resetTab(cwiartka4);
+        int[][] quarter1 = new int[10][10];
+        int[][] quarter2 = new int[10][10];
+        int[][] quarter3 = new int[10][10];
+        int[][] quarter4 = new int[10][10];
+        int[][] quarter1o = new int[10][10];
+        int[][] quarter2o = new int[10][10];
+        int[][] quarter3o = new int[10][10];
+        int[][] big = new int[100][100];
+        resetTab(quarter1);
+        resetTab(quarter2);
+        resetTab(quarter3);
+        resetTab(quarter4);
 
         Scanner scan = new Scanner(System.in);
 
-        double kat = 0.0; //aby być w miare dokładnym skok musi wynosić ok 3 stopnie
-        double odleglosc = 0; //zależna od odczytu z czujnika
+        double angle = 0.0; //aby być działała musi być równa ilości przebiegu pętli
+        double distance = 0; //zależna od odczytu z czujnika
         double y;
         double x;
-        double skok = 90.0 / 20.0;
+        double diff = 90.0 / 20.0;
 
         for (int c = 0; c < 4; c++) {
 
             if (c == 0) {
-                odleglosc = 0;
-                kat = 0.0;
-                for (int i = 0; i < 20; i++) {
-                    kat +=skok;
-                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
-                    System.out.println(kat);
-                    y = Math.cos(Math.toRadians(kat)) * odleglosc;
+                distance = 0;
+                angle = 0.0;
+                for (int i = 0; i < 20; i++) { // ptla wykonuje się 20 razy, pokryć najbardziej pesymistyczny przypadek
+                    angle += diff;
+                    //distance= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(angle);
+                    y = Math.cos(Math.toRadians(angle)) * distance;
                     //y=odleglosc;
                     y = Math.round(y);
-                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.sin(Math.toRadians(angle)) * distance;
                     x = Math.round(x);
                     System.out.println("y= " + y + " x= " + x);
-                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
+                    quarter4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(diff); // ROBOT obrót o dany kąt
                 }
-                cwiartka4[0][0] = 7;      //
-                cwiartka4[0][1] = 7;      //wielkosc robota
-                cwiartka4[1][0] = 7;      //stojącego na srodku
-                cwiartka4[1][1] = 7;      //
+                quarter4[0][0] = 7;      //
+                quarter4[0][1] = 7;      //wielkosc robota
+                quarter4[1][0] = 7;      //stojącego na srodku
+                quarter4[1][1] = 7;      //
             }
             if (c == 1) {
-                odleglosc = 0;
-                kat = 0.0;
-                for (int i = 0; i < 20; i++) {
-                    kat +=skok;
-                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
-                    System.out.println(kat);
-                    y = Math.cos(Math.toRadians(kat)) * odleglosc;
+                distance = 0;
+                angle = 0.0;
+                for (int i = 0; i < 20; i++) { // ptla wykonuje się 20 razy, pokryć najbardziej pesymistyczny przypadek
+                    angle += diff;
+                    //distance= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(angle);
+                    y = Math.cos(Math.toRadians(angle)) * distance;
                     //y=odleglosc;
                     y = Math.round(y);
-                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.sin(Math.toRadians(angle)) * distance;
                     x = Math.round(x);
                     System.out.println("y= " + y + " x= " + x);
-                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
+                    quarter4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(diff); // ROBOT obrót o dany kąt
                 }
-                cwiartka1[0][0] = 7;      //
-                cwiartka1[0][1] = 7;      //wielkosc robota
-                cwiartka1[1][0] = 7;      //stojącego na srodku
-                cwiartka1[1][1] = 7;      //
+                quarter1[0][0] = 7;      //
+                quarter1[0][1] = 7;      //wielkosc robota
+                quarter1[1][0] = 7;      //stojącego na srodku
+                quarter1[1][1] = 7;      //
             }
             if (c == 2) {
-                odleglosc = 0;
-                kat = 0.0;
-                for (int i = 0; i < 20; i++) {
-                    kat +=skok;
-                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
-                    System.out.println(kat);
-                    y = Math.cos(Math.toRadians(kat)) * odleglosc;
+                distance = 0;
+                angle = 0.0;
+                for (int i = 0; i < 20; i++) { // ptla wykonuje się 20 razy, pokryć najbardziej pesymistyczny przypadek
+                    angle += diff;
+                    //distance= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(angle);
+                    y = Math.cos(Math.toRadians(angle)) * distance;
                     //y=odleglosc;
                     y = Math.round(y);
-                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.sin(Math.toRadians(angle)) * distance;
                     x = Math.round(x);
                     System.out.println("y= " + y + " x= " + x);
-                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
+                    quarter4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(diff); // ROBOT obrót o dany kąt
                 }
-                cwiartka2[0][0] = 7;      //
-                cwiartka2[0][1] = 7;      //wielkosc robota
-                cwiartka2[1][0] = 7;      //stojącego na srodku
-                cwiartka2[1][1] = 7;      //
+                quarter2[0][0] = 7;      //
+                quarter2[0][1] = 7;      //wielkosc robota
+                quarter2[1][0] = 7;      //stojącego na srodku
+                quarter2[1][1] = 7;      //
             }
             if (c == 3) {
-                odleglosc = 0;
-                kat = 0.0;
-                for (int i = 0; i < 20; i++) {
-                    kat +=skok;
-                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
-                    System.out.println(kat);
-                    y = Math.cos(Math.toRadians(kat)) * odleglosc;
+                distance = 0;
+                angle = 0.0;
+                for (int i = 0; i < 20; i++) { // ptla wykonuje się 20 razy, pokryć najbardziej pesymistyczny przypadek
+                    angle += diff;
+                    //distance= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(angle);
+                    y = Math.cos(Math.toRadians(angle)) * distance;
                     //y=odleglosc;
                     y = Math.round(y);
-                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.sin(Math.toRadians(angle)) * distance;
                     x = Math.round(x);
                     System.out.println("y= " + y + " x= " + x);
-                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
+                    quarter4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(diff); // ROBOT obrót o dany kąt
                 }
-                cwiartka3[0][0] = 7;      //
-                cwiartka3[0][1] = 7;      //wielkosc robota
-                cwiartka3[1][0] = 7;      //stojącego na srodku
-                cwiartka3[1][1] = 7;      //
+                quarter3[0][0] = 7;      //
+                quarter3[0][1] = 7;      //wielkosc robota
+                quarter3[1][0] = 7;      //stojącego na srodku
+                quarter3[1][1] = 7;      //
             }
         }
 
-        cwiartka1o = obroc(cwiartka1);
-        cwiartka2o = obroc(cwiartka2);
-        cwiartka2o = obroc(cwiartka2o);
-        cwiartka3o = obroc(cwiartka3);
-        cwiartka3o = obroc(cwiartka3o);
-        cwiartka3o = obroc(cwiartka3o);
+        quarter1o = rotate(quarter1);
+        quarter2o = rotate(quarter2);
+        quarter2o = rotate(quarter2o);
+        quarter3o = rotate(quarter3);
+        quarter3o = rotate(quarter3o);
+        quarter3o = rotate(quarter3o);
 
-        wypisz(cwiartka1o);
+        show(quarter1o);
         System.out.println("");
-        wypisz(cwiartka2o);
+        show(quarter2o);
         System.out.println("");
-        wypisz(cwiartka3o);
+        show(quarter3o);
         System.out.println("");
-        wypisz(cwiartka4);
+        show(quarter4);
         System.out.println("");
 
-        resetTab2(cala);
-        cala = scalanie(cwiartka2o, cwiartka1o, cwiartka3o, cwiartka4);
-        wypisz2(cala);
+        resetTab2(big);
+        big = merge(quarter2o, quarter1o, quarter3o, quarter4);
+        showBig(big);
     }
 
-    public static void resetTab(int[][] tablica) {
+    public static void resetTab(int[][] table) {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                tablica[i][j] = 0;
+                table[i][j] = 0;
             }
         }
     }
 
-    public static void resetTab2(int[][] tablica) {
+    public static void resetTab2(int[][] table) {
 
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 100; j++) {
-                tablica[i][j] = 0;
+                table[i][j] = 0;
             }
         }
     }
 
-    public static void wypisz(int[][] tablica) {
+    public static void show(int[][] table) {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                System.out.print(tablica[i][j] + " ");
+                System.out.print(table[i][j] + " ");
             }
             System.out.println();
         }
     }
 
-    public static void wypisz2(int[][] tablica) {
+    public static void showBig(int[][] table) {
 
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 100; j++) {
-                System.out.print(tablica[i][j] + " ");
+                System.out.print(table[i][j] + " ");
             }
             System.out.println();
         }
     }
 
-    public static int[][] obroc(int[][] tablica) {
-        int[][] tablicaO = new int[10][10];
-        resetTab(tablicaO);
+    public static int[][] rotate(int[][] table) {
+        int[][] tableR = new int[10][10];
+        resetTab(tableR);
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                tablicaO[j][i] = tablica[i][9 - j];
+                tableR[j][i] = table[i][9 - j];
             }
         }
-        return tablicaO;
+        return tableR;
     }
 
-    public static int[][] scalanie(int[][] tab1, int[][] tab2, int[][] tab3, int[][] tab4) {
-        int[][] cala = new int[100][100];
+    public static int[][] merge(int[][] tab1, int[][] tab2, int[][] tab3, int[][] tab4) {
+        int[][] big = new int[100][100];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                cala[i][j] = tab1[i][j];
+                big[i][j] = tab1[i][j];
             }
         }
         for (int i = 10; i < 20; i++) {
             for (int j = 0; j < 10; j++) {
-                cala[i][j] = tab3[i - 10][j];
+                big[i][j] = tab3[i - 10][j];
             }
         }
 
         for (int i = 0; i < 10; i++) {
             for (int j = 10; j < 20; j++) {
-                cala[i][j] = tab2[i][j - 10];
+                big[i][j] = tab2[i][j - 10];
             }
         }
 
         for (int i = 10; i < 20; i++) {
             for (int j = 10; j < 20; j++) {
-                cala[i][j] = tab4[i - 10][j - 10];
+                big[i][j] = tab4[i - 10][j - 10];
             }
         }
 
-        return cala;
+        return big;
     }
 }
