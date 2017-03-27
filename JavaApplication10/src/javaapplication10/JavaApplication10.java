@@ -36,29 +36,26 @@ public class JavaApplication10 {
         double kat = 0.0; //aby być w miare dokładnym skok musi wynosić ok 3 stopnie
         double odleglosc = 0; //zależna od odczytu z czujnika
         double y;
-        double x = 0;
-        double skok = 90.0 / 10.0;
+        double x;
+        double skok = 90.0 / 20.0;
 
         for (int c = 0; c < 4; c++) {
 
             if (c == 0) {
-
-                odleglosc = 10;
+                odleglosc = 0;
                 kat = 0.0;
-                for (int i = 0; i < 10; i++) {
-                    kat += skok;
-                    odleglosc--;
+                for (int i = 0; i < 20; i++) {
+                    kat +=skok;
+                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
                     System.out.println(kat);
                     y = Math.cos(Math.toRadians(kat)) * odleglosc;
                     //y=odleglosc;
                     y = Math.round(y);
-                    x = i;
+                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.round(x);
                     System.out.println("y= " + y + " x= " + x);
-                    for (int j = 0; j < 10; j++) {
-                        cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                        //cwiartka4[i][j] = (i+1)*j;
-                    }
-                    //robot.rotate(skok); // ROBOT obrót o dany kąt
+                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka4[0][0] = 7;      //
                 cwiartka4[0][1] = 7;      //wielkosc robota
@@ -66,20 +63,20 @@ public class JavaApplication10 {
                 cwiartka4[1][1] = 7;      //
             }
             if (c == 1) {
-                odleglosc = 10;
+                odleglosc = 0;
                 kat = 0.0;
-                for (int i = 0; i < 10; i++) {
-                    kat += skok;
-                    odleglosc--;
+                for (int i = 0; i < 20; i++) {
+                    kat +=skok;
+                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(kat);
                     y = Math.cos(Math.toRadians(kat)) * odleglosc;
                     //y=odleglosc;
-                    x = i;
-                    System.out.println("y= " + (int) y + " x= " + (int) x);
-                    for (int j = 0; j < 10; j++) {
-                        cwiartka1[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                        //cwiartka1[i][j] = k-1;
-                    }
-                    //robot.rotate(skok); // ROBOT obrót o dany kąt
+                    y = Math.round(y);
+                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.round(x);
+                    System.out.println("y= " + y + " x= " + x);
+                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka1[0][0] = 7;      //
                 cwiartka1[0][1] = 7;      //wielkosc robota
@@ -87,20 +84,20 @@ public class JavaApplication10 {
                 cwiartka1[1][1] = 7;      //
             }
             if (c == 2) {
-                odleglosc = 10;
+                odleglosc = 0;
                 kat = 0.0;
-                for (int i = 0; i < 10; i++) {
-                    kat += skok;
-                    odleglosc--;
+                for (int i = 0; i < 20; i++) {
+                    kat +=skok;
+                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(kat);
                     y = Math.cos(Math.toRadians(kat)) * odleglosc;
                     //y=odleglosc;
-                    x = i;
-                    System.out.println("y= " + (int) y + " x= " + (int) x);
-                    for (int j = 0; j < 10; j++) {
-                        cwiartka2[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                        //cwiartka2[i][j] = (i+1)*j;
-                    }
-                    //robot.rotate(skok); // ROBOT obrót o dany kąt
+                    y = Math.round(y);
+                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.round(x);
+                    System.out.println("y= " + y + " x= " + x);
+                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka2[0][0] = 7;      //
                 cwiartka2[0][1] = 7;      //wielkosc robota
@@ -108,20 +105,20 @@ public class JavaApplication10 {
                 cwiartka2[1][1] = 7;      //
             }
             if (c == 3) {
-                odleglosc = 10;
+                odleglosc = 0;
                 kat = 0.0;
-                for (int i = 0; i < 10; i++) {
-                    kat += skok;
-                    odleglosc--;
+                for (int i = 0; i < 20; i++) {
+                    kat +=skok;
+                    //odleglosc= LegoEV3Controller.getDistance_UltrasonicSensor(1);
+                    System.out.println(kat);
                     y = Math.cos(Math.toRadians(kat)) * odleglosc;
                     //y=odleglosc;
-                    x = i;
-                    System.out.println("y= " + (int) y + " x= " + (int) x);
-                    for (int j = 0; j < 10; j++) {
-                        cwiartka3[Math.abs((int) x)][Math.abs((int) y)] = 1;
-                        //cwiartka3[i][j] = (i+1)*j;
-                    }
-                    //robot.rotate(skok); // ROBOT obrót o dany kąt
+                    y = Math.round(y);
+                    x = Math.sin(Math.toRadians(kat)) * odleglosc;
+                    x = Math.round(x);
+                    System.out.println("y= " + y + " x= " + x);
+                    cwiartka4[Math.abs((int) x)][Math.abs((int) y)] = 1;
+                    //LegoEV3Controller.rotate(skok); // ROBOT obrót o dany kąt
                 }
                 cwiartka3[0][0] = 7;      //
                 cwiartka3[0][1] = 7;      //wielkosc robota
